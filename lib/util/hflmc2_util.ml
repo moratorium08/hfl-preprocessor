@@ -182,11 +182,6 @@ module Fn = struct
   let neg i = -i
   let const x _ = x
 
-  let print ?(tag="") pp x =
-    if tag = ""
-    then Format.printf "@[%a@]@." pp x
-    else Format.printf "%s: @[%a@]@." tag pp x
-
   let on injection g x y = g (injection x) (injection y)
 
   let curry f x y = f (x, y)
